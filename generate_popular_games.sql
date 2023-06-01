@@ -10,12 +10,12 @@ CREATE TABLE IF NOT EXISTS popular_games(
   Backlogs NUMERIC,
   Wishlist NUMERIC
 );
-INSERT INTO popular_games 
+INSERT INTO popular_games
 SELECT
 	gameid,
-	Title, 
+	Title,
 	ReleaseDate,
-	Rating,  
+	Rating,
 	CASE
 		WHEN TimesListed LIKE '%K%' THEN SUBSTR(TimesListed, 1, INSTR(TimesListed, 'K') - 1) * 1000
 		ELSE TimesListed
