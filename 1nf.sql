@@ -10,7 +10,7 @@ Playing,Backlogs,
 Wishlist);
 
 INSERT INTO videogame(
-title,ReleaseDate,
+Title,ReleaseDate,
 Team,Rating,
 TimesListed,NumberofReviews,
 Genres,Summary,
@@ -120,7 +120,7 @@ JOIN split_t ON split_t.gameid = split1.gameid;
 /* Create new table joining the splitted reviews table and the split2 table */
 CREATE TABLE game_split AS
 SELECT * FROM split2
-JOIN rev ON rev.gameid = split2.gameid
+JOIN rev ON rev.gameid = split2.gameid;
 
 /* Create new 1nf table */
 CREATE TABLE game_1nf AS

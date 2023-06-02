@@ -35,11 +35,13 @@ WHERE  game_1nf.split_review = review.review_name AND game_1nf.gameid = popular_
 
 /* Drop all unecessary tables */
 -- dropping the unwanted tables
-DROP TABLE split_t
-DROP TABLE split_g
-DROP TABLE split
-DROP TABLE split1
-DROP TABLE game_split
-DROP TABLE game
-DROP TABLE videogame
-DROP TABLE rev
+DROP TABLE split_t;
+DROP TABLE split_g;
+DROP TABLE split;
+DROP TABLE split1;
+DROP TABLE game_split;
+DROP TABLE game;
+DROP TABLE videogame;
+DROP TABLE rev;
+DROP TABLE split2;
+DROP TABLE game_1nf;
