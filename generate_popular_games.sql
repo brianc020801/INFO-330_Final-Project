@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS popular_games(
   Rating NUMERIC,
   TimesListed NUMERIC,
   NumberofReviews NUMERIC,
+  Summary TEXT, 
   Plays NUMERIC,
   Playing NUMERIC,
   Backlogs NUMERIC,
@@ -24,6 +25,7 @@ SELECT
 		WHEN NumberofReviews LIKE '%K%' THEN SUBSTR(NumberofReviews, 1, INSTR(NumberofReviews, 'K') - 1) * 1000
 		ELSE NumberofReviews
 	END AS NumberofReviews,
+	Summary, 
 	CASE
 		WHEN Plays LIKE '%K%' THEN SUBSTR(Plays, 1, INSTR(Plays, 'K') - 1) * 1000
 		ELSE Plays
